@@ -23,6 +23,50 @@
       pointer-events: none;
     }
 
+    .navbar {
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: min(90vw, 980px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 22px;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 999px;
+      backdrop-filter: blur(18px);
+      z-index: 2;
+      box-shadow: 0 18px 42px rgba(0, 0, 0, 0.16);
+    }
+
+    .brand {
+      font-size: 0.9rem;
+      letter-spacing: 0.18em;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: rgba(255, 255, 255, 0.92);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s ease, transform 0.2s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #ffffff;
+      transform: translateY(-1px);
+    }
+
     .bubble {
       position: absolute;
       border-radius: 50%;
@@ -180,6 +224,14 @@
     <div class="bubble"></div>
     <div class="bubble"></div>
     <div class="bubble"></div>
+  </div>
+  <div class="navbar">
+    <div class="brand">Todo Preview</div>
+    <div class="nav-links">
+      <a href="#" class="active">Home</a>
+      <a href="#">Tasks</a>
+      <a href="#">About</a>
+    </div>
   </div>
   <div class="card">
     <h1>Todo List Animation</h1>
